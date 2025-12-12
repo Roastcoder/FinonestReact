@@ -11,25 +11,25 @@ const values = [
     icon: Shield,
     title: "Trust & Transparency",
     description: "We believe in complete transparency with no hidden charges or surprises.",
-    color: "#0064D6",
+    color: "#0A1F44",
   },
   {
     icon: Heart,
     title: "Customer First",
     description: "Every decision we make is centered around our customers' best interests.",
-    color: "#12D6E7",
+    color: "#F4D86B",
   },
   {
     icon: Target,
     title: "Innovation",
     description: "We continuously innovate to make financial services more accessible.",
-    color: "#008B96",
+    color: "#FFB800",
   },
   {
     icon: Award,
     title: "Excellence",
     description: "We strive for excellence in every interaction and service we provide.",
-    color: "#002E9C",
+    color: "#0A1F44",
   },
 ]
 
@@ -97,10 +97,10 @@ export default function AboutPage() {
     <div ref={sectionRef} className="min-h-screen bg-white">
       {/* Hero Section */}
       <motion.section className="relative pt-32 pb-20 overflow-hidden" style={{ y: heroY, opacity: heroOpacity }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f4f7fa] to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white" />
 
         <motion.div
-          className="absolute top-20 left-10 w-64 h-64 bg-[#0064D6]/10 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-64 h-64 bg-[#F4D86B]/10 rounded-full blur-3xl"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY }}
         />
@@ -109,7 +109,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <motion.span
-                className="inline-block px-4 py-2 bg-[#0064D6]/10 rounded-full text-[#0064D6] text-sm font-medium mb-6"
+                className="inline-block px-4 py-2 bg-[#F4D86B]/10 rounded-full text-[#0A1F44] text-sm font-medium mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
               >
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.1 }}
               >
                 Your Trusted{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0064D6] to-[#12D6E7]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4D86B] to-[#FFB800]">
                   Financial
                 </span>{" "}
                 Partner in India
@@ -147,15 +147,15 @@ export default function AboutPage() {
                 transition={{ delay: 0.3 }}
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#008B96]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#FFB800]" />
                   <span className="text-gray-700">DSA Network Partner</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#008B96]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#FFB800]" />
                   <span className="text-gray-700">Multiple Bank Partners</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#008B96]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#FFB800]" />
                   <span className="text-gray-700">Since 2017</span>
                 </div>
               </motion.div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
             >
-              <div className="relative bg-gradient-to-br from-[#0064D6] to-[#002E9C] rounded-3xl p-8 text-white">
+              <div className="relative bg-gradient-to-br from-[#0A1F44] to-[#000000] rounded-3xl p-8 text-white shadow-2xl">
                 <div className="absolute inset-0 bg-white/10 rounded-3xl blur-xl scale-95" />
                 <div className="relative grid grid-cols-2 gap-6">
                   <div className="text-center p-4">
@@ -194,13 +194,13 @@ export default function AboutPage() {
       </motion.section>
 
       {/* Vision & Mission */}
-      <section className="py-20 bg-[#f4f7fa]">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            <ParallaxCard glowColor="#0064D6">
+            <ParallaxCard glowColor="#F4D86B">
               <div className="flex items-start gap-4">
-                <div className="w-14 h-14 bg-[#0064D6]/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <Target className="w-7 h-7 text-[#0064D6]" />
+                <div className="w-14 h-14 bg-[#F4D86B]/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Target className="w-7 h-7 text-[#F4D86B]" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#111111] mb-3">Our Vision</h3>
@@ -212,10 +212,10 @@ export default function AboutPage() {
               </div>
             </ParallaxCard>
 
-            <ParallaxCard glowColor="#12D6E7">
+            <ParallaxCard glowColor="#FFB800">
               <div className="flex items-start gap-4">
-                <div className="w-14 h-14 bg-[#12D6E7]/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <Sparkles className="w-7 h-7 text-[#12D6E7]" />
+                <div className="w-14 h-14 bg-[#FFB800]/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Sparkles className="w-7 h-7 text-[#FFB800]" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-[#111111] mb-3">Our Mission</h3>
@@ -235,7 +235,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.span
-              className="inline-block px-4 py-2 bg-[#0064D6]/10 rounded-full text-[#0064D6] text-sm font-medium mb-4"
+              className="inline-block px-4 py-2 bg-[#F4D86B]/10 rounded-full text-[#0A1F44] text-sm font-medium mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -257,7 +257,7 @@ export default function AboutPage() {
             {services.map((service, index) => (
               <motion.div
                 key={service.name}
-                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#F4D86B]/30 transition-all"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -272,11 +272,11 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-[#f4f7fa]">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.span
-              className="inline-block px-4 py-2 bg-[#008B96]/10 rounded-full text-[#008B96] text-sm font-medium mb-4"
+              className="inline-block px-4 py-2 bg-[#FFB800]/10 rounded-full text-[#0A1F44] text-sm font-medium mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -314,7 +314,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-gradient-to-r from-[#0064D6] to-[#002E9C]">
+      <section className="py-20 bg-gradient-to-r from-[#0A1F44] to-[#000000]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.h2
@@ -349,12 +349,12 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
-                    <div className="text-2xl font-bold text-[#12D6E7] mb-2">{milestone.year}</div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10 hover:bg-white/20 transition-all">
+                    <div className="text-2xl font-bold text-[#F4D86B] mb-2">{milestone.year}</div>
                     <div className="text-white font-semibold mb-1">{milestone.title}</div>
                     <div className="text-white/60 text-sm">{milestone.description}</div>
                   </div>
-                  <div className="hidden lg:block absolute -bottom-8 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#12D6E7] rounded-full border-4 border-[#002E9C]" />
+                  <div className="hidden lg:block absolute -bottom-8 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#F4D86B] rounded-full border-4 border-[#0A1F44]" />
                 </motion.div>
               ))}
             </div>
@@ -366,7 +366,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.span
-              className="inline-block px-4 py-2 bg-[#0064D6]/10 rounded-full text-[#0064D6] text-sm font-medium mb-4"
+              className="inline-block px-4 py-2 bg-[#F4D86B]/10 rounded-full text-[#0A1F44] text-sm font-medium mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -395,7 +395,7 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="relative mb-4 mx-auto w-44 h-44">
-                  <div className="absolute inset-0 rounded-full border-4 border-[#12D6E7]" />
+                  <div className="absolute inset-0 rounded-full border-4 border-[#F4D86B]" />
                   <Image
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
@@ -403,14 +403,14 @@ export default function AboutPage() {
                     height={176}
                     className="relative w-full h-full object-cover rounded-full bg-gray-100"
                   />
-                  <div className="absolute inset-0 bg-[#0064D6]/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[#0A1F44]/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <a href={member.linkedin} className="p-2 bg-white rounded-full">
-                      <Linkedin className="w-5 h-5 text-[#0064D6]" />
+                      <Linkedin className="w-5 h-5 text-[#0A1F44]" />
                     </a>
                   </div>
                 </div>
                 <h3 className="text-lg font-bold text-[#111111]">{member.name}</h3>
-                <p className="text-[#0064D6] font-medium text-sm mb-2">{member.role}</p>
+                <p className="text-[#F4D86B] font-medium text-sm mb-2">{member.role}</p>
                 <p className="text-gray-500 text-xs leading-relaxed px-2">{member.bio}</p>
               </motion.div>
             ))}
@@ -419,7 +419,7 @@ export default function AboutPage() {
       </section>
 
       {/* Company Info */}
-      <section className="py-20 bg-[#f4f7fa]">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -432,34 +432,34 @@ export default function AboutPage() {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#008B96]" />
+                    <CheckCircle2 className="w-5 h-5 text-[#FFB800]" />
                     <span className="text-gray-700">CIN: U74999RJ2018PTC060491</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#008B96]" />
+                    <CheckCircle2 className="w-5 h-5 text-[#FFB800]" />
                     <span className="text-gray-700">Headquarters: Jaipur, Rajasthan</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#008B96]" />
+                    <CheckCircle2 className="w-5 h-5 text-[#FFB800]" />
                     <span className="text-gray-700">Authorized DSA Partner</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#008B96]" />
+                    <CheckCircle2 className="w-5 h-5 text-[#FFB800]" />
                     <span className="text-gray-700">Multiple Bank & NBFC Partnerships</span>
                   </div>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-8">
                 <div className="text-center">
-                  <Building2 className="w-16 h-16 text-[#0064D6] mx-auto mb-2" />
+                  <Building2 className="w-16 h-16 text-[#0A1F44] mx-auto mb-2" />
                   <span className="text-sm text-gray-500">Registered Company</span>
                 </div>
                 <div className="text-center">
-                  <Shield className="w-16 h-16 text-[#008B96] mx-auto mb-2" />
+                  <Shield className="w-16 h-16 text-[#FFB800] mx-auto mb-2" />
                   <span className="text-sm text-gray-500">Trusted Partner</span>
                 </div>
                 <div className="text-center">
-                  <Globe className="w-16 h-16 text-[#12D6E7] mx-auto mb-2" />
+                  <Globe className="w-16 h-16 text-[#F4D86B] mx-auto mb-2" />
                   <span className="text-sm text-gray-500">Pan India</span>
                 </div>
               </div>

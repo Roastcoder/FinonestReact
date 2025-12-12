@@ -14,7 +14,7 @@ const contactMethods = [
     value: "1800-123-456",
     subtitle: "Toll-free, 24/7",
     href: "tel:1800123456",
-    color: "#0064D6",
+    color: "#0A1F44",
   },
   {
     icon: Mail,
@@ -22,7 +22,7 @@ const contactMethods = [
     value: "hello@finonest.com",
     subtitle: "We reply within 24 hours",
     href: "mailto:hello@finonest.com",
-    color: "#12D6E7",
+    color: "#F4D86B",
   },
   {
     icon: MessageCircle,
@@ -30,7 +30,7 @@ const contactMethods = [
     value: "Start a conversation",
     subtitle: "Available 24/7",
     href: "#chat",
-    color: "#008B96",
+    color: "#FFB800",
   },
   {
     icon: MapPin,
@@ -38,7 +38,7 @@ const contactMethods = [
     value: "Mumbai, Maharashtra",
     subtitle: "Mon-Sat, 9AM-6PM",
     href: "#location",
-    color: "#002E9C",
+    color: "#0A1F44",
   },
 ]
 
@@ -91,12 +91,12 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#f4f7fa] to-white pt-24 pb-16">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <motion.span
-            className="inline-block px-4 py-2 bg-[#0064D6]/10 rounded-full text-[#0064D6] text-sm font-medium mb-4"
+            className="inline-block px-4 py-2 bg-[#F4D86B]/10 rounded-full text-[#0A1F44] text-sm font-medium mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -109,7 +109,7 @@ export default function ContactPage() {
             transition={{ delay: 0.1 }}
           >
             We're Here to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0064D6] to-[#12D6E7]">Help You</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4D86B] to-[#FFB800]">Help You</span>
           </motion.h1>
           <motion.p
             className="text-lg text-gray-600 max-w-2xl mx-auto"
@@ -133,7 +133,7 @@ export default function ContactPage() {
             <motion.a
               key={method.title}
               href={method.href}
-              className="bg-white rounded-2xl p-6 shadow-lg shadow-black/5 border border-gray-100 hover:shadow-xl transition-shadow group"
+              className="bg-white rounded-3xl p-6 shadow-lg shadow-black/5 border border-gray-100 hover:shadow-xl hover:border-[#F4D86B]/30 transition-all group"
               whileHover={{ y: -5 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -172,7 +172,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={(e) => handleInputChange("name", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                         placeholder="Your name"
                       />
                     </div>
@@ -183,7 +183,7 @@ export default function ContactPage() {
                         required
                         value={formData.phone}
                         onChange={(e) => handleInputChange("phone", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                         placeholder="+91 98765 43210"
                       />
                     </div>
@@ -196,7 +196,7 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={(e) => handleInputChange("email", e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -206,7 +206,7 @@ export default function ContactPage() {
                     <select
                       value={formData.loanType}
                       onChange={(e) => handleInputChange("loanType", e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                     >
                       <option value="">Select a product</option>
                       <option value="personal">Personal Loan</option>
@@ -225,14 +225,14 @@ export default function ContactPage() {
                       rows={4}
                       value={formData.message}
                       onChange={(e) => handleInputChange("message", e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all resize-none"
                       placeholder="Tell us about your requirements..."
                     />
                   </div>
 
                   <motion.button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-[#0064D6] to-[#002E9C] text-white rounded-xl font-semibold flex items-center justify-center gap-2 shadow-lg shadow-[#0064D6]/25"
+                    className="w-full py-4 bg-gradient-to-r from-[#F4D86B] to-[#FFB800] text-[#0A1F44] rounded-2xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-[#F4D86B]/25 hover:shadow-2xl transition-all"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onMouseEnter={() => setIsHoveringCTA(true)}
@@ -266,7 +266,7 @@ export default function ContactPage() {
                     setIsSubmitted(false)
                     setFormData({ name: "", email: "", phone: "", loanType: "", message: "" })
                   }}
-                  className="text-[#0064D6] font-medium hover:underline"
+                  className="text-[#F4D86B] font-medium hover:underline"
                 >
                   Send another message
                 </motion.button>
@@ -281,7 +281,7 @@ export default function ContactPage() {
               {faqs.map((faq, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden"
+                  className="bg-white rounded-2xl shadow-lg shadow-black/5 overflow-hidden border border-gray-100 hover:border-[#F4D86B]/30 transition-all"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
@@ -311,9 +311,9 @@ export default function ContactPage() {
             </div>
 
             {/* Office Hours */}
-            <div className="mt-8 bg-gradient-to-br from-[#0064D6]/10 to-[#12D6E7]/10 rounded-2xl p-6">
+            <div className="mt-8 bg-gradient-to-br from-[#F4D86B]/10 to-[#FFB800]/10 rounded-2xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <Clock className="w-6 h-6 text-[#0064D6]" />
+                <Clock className="w-6 h-6 text-[#0A1F44]" />
                 <h3 className="text-lg font-bold text-[#111111]">Office Hours</h3>
               </div>
               <div className="space-y-2 text-gray-600">
@@ -330,7 +330,7 @@ export default function ContactPage() {
                   <span className="font-medium">10:00 AM - 4:00 PM</span>
                 </div>
               </div>
-              <p className="mt-4 text-sm text-[#0064D6]">Phone support available 24/7 at 1800-123-456</p>
+              <p className="mt-4 text-sm text-[#0A1F44] font-medium">Phone support available 24/7 at 1800-123-456</p>
             </div>
           </motion.div>
         </div>

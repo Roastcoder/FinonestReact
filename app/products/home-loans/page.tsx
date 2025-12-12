@@ -25,14 +25,14 @@ export default function HomeLoansPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-teal-50 to-cyan-50">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50">
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/products" className="text-blue-600 hover:text-teal-600 flex items-center gap-2">
+            <Link href="/products" className="text-[#0A1F44] hover:text-[#F4D86B] flex items-center gap-2 transition-colors">
               ← Back to Products
             </Link>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">Home Loans</h1>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-[#F4D86B] to-[#FFB800] bg-clip-text text-transparent">Home Loans</h1>
           </div>
         </div>
       </div>
@@ -45,10 +45,10 @@ export default function HomeLoansPage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-6"
           >
-            <Card>
+            <Card className="rounded-3xl shadow-lg hover:shadow-2xl transition-all">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
-                  <Home className="w-6 h-6 text-blue-600" />
+                  <Home className="w-6 h-6 text-[#F4D86B]" />
                   Home Loans - Make Your Dream Home Reality
                 </CardTitle>
               </CardHeader>
@@ -60,33 +60,33 @@ export default function HomeLoansPage() {
                 
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <motion.div 
-                    className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg text-center"
+                    className="bg-gradient-to-br from-[#F4D86B]/10 to-[#F4D86B]/20 p-4 rounded-2xl text-center"
                     initial={{ opacity: 0, y: 20, rotateX: -15 }}
                     animate={{ opacity: 1, y: 0, rotateX: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
                     whileHover={{ scale: 1.05, rotateZ: 2 }}
                   >
-                    <div className="text-2xl font-bold text-blue-600">8.5%</div>
+                    <div className="text-2xl font-bold text-[#0A1F44]">8.5%</div>
                     <div className="text-sm text-gray-600">Interest Rate (p.a.)</div>
                   </motion.div>
                   <motion.div 
-                    className="bg-gradient-to-br from-teal-50 to-teal-100 p-4 rounded-lg text-center"
+                    className="bg-gradient-to-br from-[#FFB800]/10 to-[#FFB800]/20 p-4 rounded-2xl text-center"
                     initial={{ opacity: 0, y: 20, rotateX: -15 }}
                     animate={{ opacity: 1, y: 0, rotateX: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     whileHover={{ scale: 1.05, rotateZ: -2 }}
                   >
-                    <div className="text-2xl font-bold text-teal-600">₹5Cr</div>
+                    <div className="text-2xl font-bold text-[#0A1F44]">₹5Cr</div>
                     <div className="text-sm text-gray-600">Max Amount</div>
                   </motion.div>
                   <motion.div 
-                    className="bg-gradient-to-br from-cyan-50 to-cyan-100 p-4 rounded-lg text-center"
+                    className="bg-gradient-to-br from-[#0A1F44]/10 to-[#0A1F44]/20 p-4 rounded-2xl text-center"
                     initial={{ opacity: 0, y: 20, rotateX: -15 }}
                     animate={{ opacity: 1, y: 0, rotateX: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
                     whileHover={{ scale: 1.05, rotateZ: 2 }}
                   >
-                    <div className="text-2xl font-bold text-cyan-600">30yrs</div>
+                    <div className="text-2xl font-bold text-[#0A1F44]">30yrs</div>
                     <div className="text-sm text-gray-600">Max Tenure</div>
                   </motion.div>
                 </div>
@@ -95,63 +95,43 @@ export default function HomeLoansPage() {
                   <h3 className="font-semibold text-gray-900">Key Features:</h3>
                   <ul className="space-y-2">
                     <motion.li 
-                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-50 transition-colors"
+                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#F4D86B]/10 transition-colors"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.6 }}
                       whileHover={{ x: 5, scale: 1.02 }}
                     >
-                      <motion.div
-                        animate={{ rotateZ: 360 }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                      >
-                        <TrendingUp className="w-5 h-5 text-blue-600" />
-                      </motion.div>
+                      <TrendingUp className="w-5 h-5 text-[#F4D86B]" />
                       <span className="text-sm font-medium">Lowest interest rates in market</span>
                     </motion.li>
                     <motion.li 
-                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-teal-50 transition-colors"
+                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#FFB800]/10 transition-colors"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.7 }}
                       whileHover={{ x: 5, scale: 1.02 }}
                     >
-                      <motion.div
-                        animate={{ scale: [1, 1.2, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <Shield className="w-5 h-5 text-teal-600" />
-                      </motion.div>
+                      <Shield className="w-5 h-5 text-[#FFB800]" />
                       <span className="text-sm font-medium">Up to 90% financing</span>
                     </motion.li>
                     <motion.li 
-                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-cyan-50 transition-colors"
+                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#0A1F44]/10 transition-colors"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.8 }}
                       whileHover={{ x: 5, scale: 1.02 }}
                     >
-                      <motion.div
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                      >
-                        <ArrowRight className="w-5 h-5 text-cyan-600" />
-                      </motion.div>
+                      <ArrowRight className="w-5 h-5 text-[#0A1F44]" />
                       <span className="text-sm font-medium">Balance transfer facility</span>
                     </motion.li>
                     <motion.li 
-                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-50 transition-colors"
+                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#F4D86B]/10 transition-colors"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.9 }}
                       whileHover={{ x: 5, scale: 1.02 }}
                     >
-                      <motion.div
-                        animate={{ rotateZ: [0, 15, -15, 0] }}
-                        transition={{ duration: 3, repeat: Infinity }}
-                      >
-                        <Award className="w-5 h-5 text-blue-600" />
-                      </motion.div>
+                      <Award className="w-5 h-5 text-[#F4D86B]" />
                       <span className="text-sm font-medium">Tax benefits under Section 80C</span>
                     </motion.li>
                   </ul>
@@ -159,26 +139,26 @@ export default function HomeLoansPage() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="rounded-3xl shadow-lg">
               <CardHeader>
                 <CardTitle>Eligibility Criteria</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#F4D86B] rounded-full"></div>
                     <span className="text-sm">Age: 23-65 years</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#FFB800] rounded-full"></div>
                     <span className="text-sm">Minimum income: ₹40,000/month</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-cyan-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#0A1F44] rounded-full"></div>
                     <span className="text-sm">Employment: 2+ years experience</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#F4D86B] rounded-full"></div>
                     <span className="text-sm">Property: Within city limits</span>
                   </li>
                 </ul>
@@ -201,9 +181,9 @@ export default function HomeLoansPage() {
               maxTenure={360}
             />
 
-            <Card className="bg-gradient-to-br from-blue-50 to-teal-50 border-2 border-blue-200">
+            <Card className="bg-gradient-to-br from-[#F4D86B]/10 to-[#FFB800]/10 border-2 border-[#F4D86B]/30 rounded-3xl shadow-xl">
               <CardContent className="pt-6">
-                <h3 className="font-bold text-blue-900 mb-4 text-center text-xl">Ready to Apply?</h3>
+                <h3 className="font-bold text-[#0A1F44] mb-4 text-center text-xl">Ready to Apply?</h3>
                 <div className="space-y-3">
                   <Link href="/eligibility">
                     <motion.div
@@ -211,13 +191,8 @@ export default function HomeLoansPage() {
                       whileTap={{ scale: 0.98, rotateZ: -1 }}
                       transition={{ type: "spring", stiffness: 400 }}
                     >
-                      <Button className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white py-3">
-                        <motion.div
-                          animate={{ rotateZ: [0, 5, -5, 0] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                        >
-                          <FileText className="w-4 h-4 mr-2" />
-                        </motion.div>
+                      <Button className="w-full bg-gradient-to-r from-[#F4D86B] to-[#FFB800] hover:from-[#FFB800] hover:to-[#F4D86B] text-[#0A1F44] py-3 rounded-2xl shadow-lg hover:shadow-2xl transition-all font-bold">
+                        <FileText className="w-4 h-4 mr-2" />
                         Apply Online Now
                       </Button>
                     </motion.div>
@@ -225,13 +200,13 @@ export default function HomeLoansPage() {
                   <div className="text-center text-sm text-gray-600">Or contact us directly</div>
                   <div className="flex gap-2">
                     <Link href="tel:+911234567890" className="flex-1">
-                      <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50">
+                      <Button variant="outline" className="w-full border-[#0A1F44] text-[#0A1F44] hover:bg-[#0A1F44]/10 rounded-xl">
                         <Phone className="w-4 h-4 mr-2" />
                         Call Now
                       </Button>
                     </Link>
                     <Link href="mailto:support@finonest.com" className="flex-1">
-                      <Button variant="outline" className="w-full border-teal-600 text-teal-600 hover:bg-teal-50">
+                      <Button variant="outline" className="w-full border-[#F4D86B] text-[#F4D86B] hover:bg-[#F4D86B]/10 rounded-xl">
                         <Mail className="w-4 h-4 mr-2" />
                         Email Us
                       </Button>
