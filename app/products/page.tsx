@@ -1,7 +1,5 @@
 "use client"
 
-"use client"
-
 import { useRef, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ParallaxCard } from "@/components/parallax-card"
@@ -35,7 +33,7 @@ const products = [
     maxAmount: "50+ Courses",
     tenure: "8-12 Weeks",
     processingFee: "₹0",
-    color: "#8B5CF6",
+    color: "#FFB800",
     features: [
       "Expert-led live sessions",
       "Industry certification",
@@ -61,7 +59,7 @@ const products = [
     maxAmount: "Unlimited",
     tenure: "Instant",
     processingFee: "₹0",
-    color: "#4860c3ff",
+    color: "#F4D86B",
     features: [
       "Instant AI-powered valuation",
       "Market-based pricing",
@@ -87,7 +85,7 @@ const products = [
     maxAmount: "₹25 Lakhs",
     tenure: "1-5 Years",
     processingFee: "1%",
-    color: "#0064D6",
+    color: "#FFB800",
     features: [
       "Instant approval in 24 hours",
       "Minimal documentation required",
@@ -113,7 +111,7 @@ const products = [
     maxAmount: "₹5 Crores",
     tenure: "5-30 Years",
     processingFee: "0.5%",
-    color: "#12D6E7",
+    color: "#0A1F44",
     features: [
       "Lowest interest rates in market",
       "Up to 90% financing",
@@ -139,7 +137,7 @@ const products = [
     maxAmount: "₹50 Lakhs",
     tenure: "1-7 Years",
     processingFee: "1.5%",
-    color: "#008B96",
+    color: "#F4D86B",
     features: [
       "Quick disbursement",
       "Collateral-free up to ₹25L",
@@ -160,7 +158,7 @@ const products = [
     maxAmount: "₹10 Lakhs",
     tenure: "Lifetime",
     processingFee: "₹0",
-    color: "#002E9C",
+    color: "#FFB800",
     features: [
       "Up to 5% cashback",
       "Airport lounge access",
@@ -186,7 +184,7 @@ const products = [
     maxAmount: "₹1 Crore",
     tenure: "1-7 Years",
     processingFee: "0.5%",
-    color: "#0064D6",
+    color: "#0A1F44",
     features: [
       "Up to 100% on-road funding",
       "New & used car financing",
@@ -212,7 +210,7 @@ const products = [
     maxAmount: "₹75 Lakhs",
     tenure: "5-15 Years",
     processingFee: "0%",
-    color: "#12D6E7",
+    color: "#F4D86B",
     features: [
       "Zero processing fee",
       "Moratorium during study",
@@ -246,23 +244,22 @@ export default function ProductsPage() {
     <div ref={sectionRef} className="min-h-screen bg-white">
       {/* Hero Section */}
       <motion.section className="relative pt-32 pb-20 overflow-hidden" style={{ y: heroY, opacity: heroOpacity }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f4f7fa] to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white" />
 
-        {/* Floating elements */}
         <motion.div
-          className="absolute top-20 left-10 w-64 h-64 bg-[#0064D6]/10 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-64 h-64 bg-[#F4D86B]/10 rounded-full blur-3xl"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY }}
         />
         <motion.div
-          className="absolute bottom-0 right-10 w-96 h-96 bg-[#12D6E7]/10 rounded-full blur-3xl"
+          className="absolute bottom-0 right-10 w-96 h-96 bg-[#FFB800]/10 rounded-full blur-3xl"
           animate={{ scale: [1.2, 1, 1.2] }}
           transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY }}
         />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.span
-            className="inline-block px-4 py-2 bg-[#0064D6]/10 rounded-full text-[#0064D6] text-sm font-medium mb-6"
+            className="inline-block px-4 py-2 bg-[#F4D86B]/10 rounded-full text-[#0A1F44] text-sm font-medium mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -276,7 +273,7 @@ export default function ProductsPage() {
             transition={{ delay: 0.1 }}
           >
             Financial Products{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0064D6] to-[#12D6E7]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4D86B] to-[#FFB800]">
               Built for You
             </span>
           </motion.h1>
@@ -335,13 +332,13 @@ export default function ProductsPage() {
 
                       {/* Quick stats */}
                       <div className="grid grid-cols-2 gap-4 mb-6">
-                        <div className="p-4 bg-[#f4f7fa] rounded-xl">
+                        <div className="p-4 bg-gray-50 rounded-2xl">
                           <div className="text-2xl font-bold" style={{ color: product.color }}>
                             {product.maxAmount}
                           </div>
                           <div className="text-sm text-gray-500">Max Amount</div>
                         </div>
-                        <div className="p-4 bg-[#f4f7fa] rounded-xl">
+                        <div className="p-4 bg-gray-50 rounded-2xl">
                           <div className="text-2xl font-bold text-[#111111]">{product.tenure}</div>
                           <div className="text-sm text-gray-500">Tenure</div>
                         </div>
@@ -354,8 +351,8 @@ export default function ProductsPage() {
                         rel="noopener noreferrer"
                       >
                         <motion.button
-                          className="w-full py-4 rounded-xl font-semibold text-white flex items-center justify-center gap-2"
-                          style={{ background: `linear-gradient(135deg, ${product.color}, #002E9C)` }}
+                          className="w-full py-4 rounded-2xl font-semibold text-white flex items-center justify-center gap-2 shadow-lg"
+                          style={{ background: `linear-gradient(135deg, ${product.color}, #0A1F44)` }}
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           onMouseEnter={() => setIsHoveringCTA(true)}
@@ -372,7 +369,7 @@ export default function ProductsPage() {
                   <div className="space-y-6">
                     {/* Features */}
                     <motion.div
-                      className="bg-white rounded-2xl p-6 shadow-lg shadow-black/5 border border-gray-100"
+                      className="bg-white rounded-3xl p-6 shadow-lg shadow-black/5 border border-gray-100 hover:shadow-2xl hover:border-[#F4D86B]/30 transition-all"
                       initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -393,7 +390,7 @@ export default function ProductsPage() {
 
                     {/* Eligibility */}
                     <motion.div
-                      className="bg-white rounded-2xl p-6 shadow-lg shadow-black/5 border border-gray-100"
+                      className="bg-white rounded-3xl p-6 shadow-lg shadow-black/5 border border-gray-100 hover:shadow-2xl hover:border-[#F4D86B]/30 transition-all"
                       initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -421,17 +418,17 @@ export default function ProductsPage() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 }}
                     >
-                      <div className="bg-[#f4f7fa] rounded-xl p-4 text-center">
+                      <div className="bg-gray-50 rounded-2xl p-4 text-center">
                         <Calculator className="w-5 h-5 mx-auto mb-2 text-gray-400" />
                         <div className="text-sm text-gray-500">Processing Fee</div>
                         <div className="font-bold text-[#111111]">{product.processingFee}</div>
                       </div>
-                      <div className="bg-[#f4f7fa] rounded-xl p-4 text-center">
+                      <div className="bg-gray-50 rounded-2xl p-4 text-center">
                         <Clock className="w-5 h-5 mx-auto mb-2 text-gray-400" />
                         <div className="text-sm text-gray-500">Approval Time</div>
                         <div className="font-bold text-[#111111]">24-48 hrs</div>
                       </div>
-                      <div className="bg-[#f4f7fa] rounded-xl p-4 text-center">
+                      <div className="bg-gray-50 rounded-2xl p-4 text-center">
                         <Shield className="w-5 h-5 mx-auto mb-2 text-gray-400" />
                         <div className="text-sm text-gray-500">Insurance</div>
                         <div className="font-bold text-[#111111]">Optional</div>
@@ -446,7 +443,7 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#0064D6] to-[#002E9C]">
+      <section className="py-16 bg-gradient-to-r from-[#0A1F44] to-[#000000]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
@@ -473,7 +470,7 @@ export default function ProductsPage() {
           >
             <Link href="/eligibility">
               <motion.button
-                className="bg-white text-[#0064D6] px-8 py-4 rounded-full font-semibold text-lg shadow-xl inline-flex items-center gap-2"
+                className="bg-gradient-to-r from-[#F4D86B] to-[#FFB800] text-[#0A1F44] px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl inline-flex items-center gap-2"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onMouseEnter={() => setIsHoveringCTA(true)}

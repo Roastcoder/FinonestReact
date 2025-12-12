@@ -133,12 +133,12 @@ export default function EligibilityPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#f4f7fa] to-white pt-24 pb-16">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <motion.span
-            className="inline-block px-4 py-2 bg-[#12D6E7]/10 rounded-full text-[#008B96] text-sm font-medium mb-4"
+            className="inline-block px-4 py-2 bg-[#F4D86B]/10 rounded-full text-[#0A1F44] text-sm font-medium mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -151,7 +151,7 @@ export default function EligibilityPage() {
             transition={{ delay: 0.1 }}
           >
             Check Your{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0064D6] to-[#12D6E7]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4D86B] to-[#FFB800]">
               Loan Eligibility
             </span>
           </motion.h1>
@@ -179,7 +179,7 @@ export default function EligibilityPage() {
                   <motion.div
                     className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all ${
                       currentStep >= step.id
-                        ? "bg-[#0064D6] border-[#0064D6] text-white"
+                        ? "bg-[#F4D86B] border-[#F4D86B] text-[#0A1F44]"
                         : "bg-white border-gray-200 text-gray-400"
                     }`}
                     animate={{
@@ -191,7 +191,7 @@ export default function EligibilityPage() {
                   {index < steps.length - 1 && (
                     <div
                       className={`w-16 sm:w-24 h-1 mx-2 rounded-full transition-colors ${
-                        currentStep > step.id ? "bg-[#0064D6]" : "bg-gray-200"
+                        currentStep > step.id ? "bg-[#F4D86B]" : "bg-gray-200"
                       }`}
                     />
                   )}
@@ -225,7 +225,7 @@ export default function EligibilityPage() {
                           type="text"
                           value={formData.name}
                           onChange={(e) => handleInputChange("name", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                           placeholder="Enter your full name"
                         />
                       </div>
@@ -235,7 +235,7 @@ export default function EligibilityPage() {
                           type="number"
                           value={formData.age}
                           onChange={(e) => handleInputChange("age", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                           placeholder="Your age"
                         />
                       </div>
@@ -248,7 +248,7 @@ export default function EligibilityPage() {
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange("email", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                           placeholder="your@email.com"
                         />
                       </div>
@@ -258,7 +258,7 @@ export default function EligibilityPage() {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange("phone", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                           placeholder="+91 98765 43210"
                         />
                       </div>
@@ -284,9 +284,9 @@ export default function EligibilityPage() {
                           <motion.button
                             key={type.id}
                             onClick={() => handleInputChange("employmentType", type.id)}
-                            className={`p-4 rounded-xl border-2 text-left transition-all ${
+                            className={`p-4 rounded-2xl border-2 text-left transition-all ${
                               formData.employmentType === type.id
-                                ? "border-[#0064D6] bg-[#0064D6]/5"
+                                ? "border-[#F4D86B] bg-[#F4D86B]/5"
                                 : "border-gray-200 hover:border-gray-300"
                             }`}
                             whileHover={{ scale: 1.02 }}
@@ -294,7 +294,7 @@ export default function EligibilityPage() {
                           >
                             <span
                               className={`font-medium ${
-                                formData.employmentType === type.id ? "text-[#0064D6]" : "text-gray-700"
+                                formData.employmentType === type.id ? "text-[#0A1F44]" : "text-gray-700"
                               }`}
                             >
                               {type.label}
@@ -310,7 +310,7 @@ export default function EligibilityPage() {
                         type="number"
                         value={formData.monthlyIncome}
                         onChange={(e) => handleInputChange("monthlyIncome", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                         placeholder="e.g., 50000"
                       />
                     </div>
@@ -334,7 +334,7 @@ export default function EligibilityPage() {
                         type="number"
                         value={formData.existingEMI}
                         onChange={(e) => handleInputChange("existingEMI", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                         placeholder="Total of all existing EMIs"
                       />
                     </div>
@@ -345,7 +345,7 @@ export default function EligibilityPage() {
                         type="number"
                         value={formData.creditScore}
                         onChange={(e) => handleInputChange("creditScore", e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                         placeholder="e.g., 750"
                       />
                       <p className="text-sm text-gray-500 mt-2">Leave blank if you don't know your credit score</p>
@@ -373,7 +373,7 @@ export default function EligibilityPage() {
                             onClick={() => handleInputChange("loanType", type.id)}
                             className={`p-4 rounded-xl border-2 flex items-center gap-3 transition-all ${
                               formData.loanType === type.id
-                                ? "border-[#0064D6] bg-[#0064D6]/5"
+                                ? "border-[#F4D86B] bg-[#F4D86B]/5"
                                 : "border-gray-200 hover:border-gray-300"
                             }`}
                             whileHover={{ scale: 1.02 }}
@@ -381,12 +381,12 @@ export default function EligibilityPage() {
                           >
                             <type.icon
                               className={`w-5 h-5 ${
-                                formData.loanType === type.id ? "text-[#0064D6]" : "text-gray-400"
+                                formData.loanType === type.id ? "text-[#F4D86B]" : "text-gray-400"
                               }`}
                             />
                             <span
                               className={`font-medium ${
-                                formData.loanType === type.id ? "text-[#0064D6]" : "text-gray-700"
+                                formData.loanType === type.id ? "text-[#F4D86B]" : "text-gray-700"
                               }`}
                             >
                               {type.label}
@@ -403,7 +403,7 @@ export default function EligibilityPage() {
                           type="number"
                           value={formData.loanAmount}
                           onChange={(e) => handleInputChange("loanAmount", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                           placeholder="e.g., 500000"
                         />
                       </div>
@@ -412,7 +412,7 @@ export default function EligibilityPage() {
                         <select
                           value={formData.tenure}
                           onChange={(e) => handleInputChange("tenure", e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0064D6] focus:ring-2 focus:ring-[#0064D6]/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#F4D86B] focus:ring-2 focus:ring-[#F4D86B]/20 outline-none transition-all"
                         >
                           <option value="">Select tenure</option>
                           <option value="1">1 Year</option>
@@ -432,7 +432,7 @@ export default function EligibilityPage() {
               <div className="flex items-center justify-between mt-10 pt-6 border-t border-gray-100">
                 <motion.button
                   onClick={prevStep}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-colors ${
+                  className={`flex items-center gap-2 px-6 py-3 rounded-2xl font-medium transition-colors ${
                     currentStep === 1 ? "text-gray-300 cursor-not-allowed" : "text-gray-600 hover:bg-gray-100"
                   }`}
                   disabled={currentStep === 1}
@@ -445,7 +445,7 @@ export default function EligibilityPage() {
 
                 <motion.button
                   onClick={nextStep}
-                  className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-[#0064D6] to-[#002E9C] text-white rounded-xl font-semibold shadow-lg shadow-[#0064D6]/25"
+                  className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-[#F4D86B] to-[#FFB800] text-[#0A1F44] rounded-2xl font-semibold shadow-lg shadow-[#F4D86B]/25"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onMouseEnter={() => setIsHoveringCTA(true)}
@@ -489,38 +489,38 @@ export default function EligibilityPage() {
 
                 <div className="grid sm:grid-cols-3 gap-6 mb-8">
                   <motion.div
-                    className="bg-gradient-to-br from-[#0064D6]/10 to-[#12D6E7]/10 rounded-2xl p-6"
+                    className="bg-gradient-to-br from-[#F4D86B]/10 to-[#F4D86B]/20 rounded-3xl p-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
                   >
                     <div className="text-sm text-gray-500 mb-1">Maximum Amount</div>
-                    <div className="text-3xl font-bold text-[#0064D6]">{eligibilityResult.maxAmount}</div>
+                    <div className="text-3xl font-bold text-[#0A1F44]">{eligibilityResult.maxAmount}</div>
                   </motion.div>
                   <motion.div
-                    className="bg-gradient-to-br from-[#12D6E7]/10 to-[#008B96]/10 rounded-2xl p-6"
+                    className="bg-gradient-to-br from-[#FFB800]/10 to-[#FFB800]/20 rounded-3xl p-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                   >
                     <div className="text-sm text-gray-500 mb-1">Interest Rate</div>
-                    <div className="text-3xl font-bold text-[#008B96]">{eligibilityResult.rate}</div>
+                    <div className="text-3xl font-bold text-[#FFB800]">{eligibilityResult.rate}</div>
                   </motion.div>
                   <motion.div
-                    className="bg-gradient-to-br from-[#008B96]/10 to-[#002E9C]/10 rounded-2xl p-6"
+                    className="bg-gradient-to-br from-[#0A1F44]/10 to-[#0A1F44]/20 rounded-3xl p-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                   >
                     <div className="text-sm text-gray-500 mb-1">Max EMI Capacity</div>
-                    <div className="text-3xl font-bold text-[#002E9C]">{eligibilityResult.emi}</div>
+                    <div className="text-3xl font-bold text-[#0A1F44]">{eligibilityResult.emi}</div>
                   </motion.div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link href="/contact">
                     <motion.button
-                      className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#0064D6] to-[#002E9C] text-white rounded-full font-semibold shadow-lg"
+                      className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#F4D86B] to-[#FFB800] text-[#0A1F44] rounded-2xl font-semibold shadow-lg"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       onMouseEnter={() => setIsHoveringCTA(true)}
@@ -532,7 +532,7 @@ export default function EligibilityPage() {
                   </Link>
                   <motion.button
                     onClick={resetForm}
-                    className="px-8 py-4 text-gray-600 hover:bg-gray-100 rounded-full font-medium transition-colors"
+                    className="px-8 py-4 text-gray-600 hover:bg-gray-100 rounded-2xl font-medium transition-colors"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -560,7 +560,7 @@ export default function EligibilityPage() {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link href="/contact">
                     <motion.button
-                      className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#0064D6] to-[#002E9C] text-white rounded-full font-semibold shadow-lg"
+                      className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#F4D86B] to-[#FFB800] text-[#0A1F44] rounded-2xl font-semibold shadow-lg"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
@@ -570,7 +570,7 @@ export default function EligibilityPage() {
                   </Link>
                   <motion.button
                     onClick={resetForm}
-                    className="px-8 py-4 text-gray-600 hover:bg-gray-100 rounded-full font-medium transition-colors"
+                    className="px-8 py-4 text-gray-600 hover:bg-gray-100 rounded-2xl font-medium transition-colors"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
